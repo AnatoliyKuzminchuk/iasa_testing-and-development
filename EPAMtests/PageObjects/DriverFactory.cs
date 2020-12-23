@@ -23,7 +23,7 @@ namespace EPAMtests.PageObjects
         }
         private void setDriver()
         {
-            driver = new ChromeDriver(EPAMtests\bin\Debug\chromedriver.exe);
+            driver = new ChromeDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
     }
