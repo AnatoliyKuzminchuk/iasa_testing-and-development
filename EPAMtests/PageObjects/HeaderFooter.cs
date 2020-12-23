@@ -44,12 +44,13 @@ namespace EPAMtests.PageObjects
 
         public string ClickOnEpamPicture()
         {
-            epampicture.Click();
+            waitAndClick(epampicture);
             return driver.Url;
         }
         public string ClickOnSearchPicture()
         {
-            searchicon.Click();
+            
+            waitAndClick(searchicon);
             return driver.Url;
         }
         public void EnterData(string XPass)
@@ -58,31 +59,31 @@ namespace EPAMtests.PageObjects
         }
         public ContactFormPage ClickOnLetterPicture()
         {
-            letterpicture.Click();
+            waitAndClick(letterpicture);
             return new ContactFormPage(driver);
         }
 
         public ContactFormPage ClickOnContactBotton()
         {
-            contactbutton.Click();
+            waitAndClick(contactbutton);
             return new ContactFormPage(driver);
         }
         public Careers Clickсareers()
         {
             сareers = driver.FindElement(By.XPath(@"//*[@id='wrapper']/div[2]/div[1]/header/div/nav/ul/li[6]/span[1]/a"));
-            сareers.Click();
+            waitAndClick(сareers);
             return new Careers(driver);
         }
         public string ClickHowWeDoIt()
         {
             howwedoitlink = driver.FindElement(By.XPath(@"//*[@id='wrapper']/div[2]/div[1]/header/div/nav/ul/li[2]/span/a"));
-            howwedoitlink.Click();
+            waitAndClick(howwedoitlink);
             return driver.Url;
         }
         public string ClickLearnMore()
         {
             learnmorebuuton = driver.FindElement(By.XPath(@"//*[@id='main']/div[1]/div[2]/section/div/div/div/div[1]/div/div[5]/div/div/div/div/div/div/div/div/div/div[3]/div/a"));
-            learnmorebuuton.Click();
+            waitAndClick(learnmorebuuton);
             return driver.Url;
         }
         public void goToUrl(string url)
@@ -96,6 +97,7 @@ namespace EPAMtests.PageObjects
         }
         public void waitAndClick(IWebElement element)
         {
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
             wait.Until(ExpectedConditions.ElementToBeClickable(element));
             element.Click();
         }
