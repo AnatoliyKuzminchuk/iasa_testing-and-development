@@ -14,7 +14,7 @@ namespace EPAMtests
 
     public class Token
     {
-        static public string token = "Bearer " + "sl.An8ndk6rfd87bWuZ-uZgHPK0UC69uCWVO5wluItc5MHZKlorz4NSfi0ifBFEZRR_W9cNo9lARgYl1D8on4Pq0P955LEyddc1CXhY9JoLnEodWdE2kDShmrUFLyEMSAX17X1OyRskrf8";
+        static public string token = "Bearer " + "tDnQGncuiycAAAAAAAAAAZ5cOdTwZ8B3s4wzDp8w4bra75WPzSOxwac2ACUCasID";
     }
     public class TestUpload
     {
